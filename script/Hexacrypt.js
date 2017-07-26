@@ -53,19 +53,6 @@ function pseudoXOR(input, rand) {
 }
 
 
-//Hash the string
-String.prototype.hashCode = function() {
-  var hash = 0, i, chr;
-  if (this.length === 0) return hash;
-  for (i = 0; i < this.length; i++) {
-    chr   = this.charCodeAt(i);
-    hash  = ((hash << 5) - hash) + chr;
-    hash |= 0; // Convert to 32bit integer
-  }
-  return hash;
-};
-
-
 //Encrypt using a watered-down Hexacrypt algorithm
 //
 //  Does NOT add garbage or a checksum
@@ -78,8 +65,8 @@ function Hexacrypt_Encrypt(message,key) {
 	message = filter(message);
 	key = filter(key);
 
-	//Cast to string
-    var seed = key.hashCode();
+	//Cast to string using Hash8
+    var seed = Hash8(key);
 
 	//A lot simpler algorithm
 	rand.reseed(seed);
