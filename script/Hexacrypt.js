@@ -1,11 +1,9 @@
-/***
- *      _   _                                      _   
- *     | | | | _____  ____ _  ___ _ __ _   _ _ __ | |_ 
- *     | |_| |/ _ \ \/ / _` |/ __| '__| | | | '_ \| __|
- *     |  _  |  __/>  < (_| | (__| |  | |_| | |_) | |_ 
- *     |_| |_|\___/_/\_\__,_|\___|_|   \__, | .__/ \__|
- *                                     |___/|_|        
- */
+//    _   _                                      _   
+//   | | | | _____  ____ _  ___ _ __ _   _ _ __ | |_ 
+//   | |_| |/ _ \ \/ / _` |/ __| '__| | | | '_ \| __|
+//   |  _  |  __/>  < (_| | (__| |  | |_| | |_) | |_ 
+//   |_| |_|\___/_/\_\__,_|\___|_|   \__, | .__/\__|
+//                                   |___/|_|        
 //  Created by Bryan McClain
 
 
@@ -74,7 +72,7 @@ String.prototype.hashCode = function() {
 //  ONLY does PseudoXOR
 function Hexacrypt_Encrypt(message,key) {
 
-	var rand = new Rand64();
+	var rand = new Rand32();
 	
 	//Filter dis stuff first
 	message = filter(message);

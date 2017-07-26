@@ -1,9 +1,10 @@
-//    ____                 _    __   _  _   
-//   |  _ \ __ _ _ __   __| |  / /_ | || |  
-//   | |_) / _` | '_ \ / _` | | '_ \| || |_ 
-//   |  _ < (_| | | | | (_| | | (_) |__   _|
-//   |_| \_\__,_|_| |_|\__,_|  \___/   |_|  
-//                                          
+//    ____                 _   _________  
+//   |  _ \ __ _ _ __   __| | |___ /___ \ 
+//   | |_) / _` | '_ \ / _` |   |_ \ __) |
+//   |  _ < (_| | | | | (_| |  ___) / __/ 
+//   |_| \_\__,_|_| |_|\__,_| |____/_____|
+//                          
+//  Pseudo-Random Number Generator for 32-Bit integers                 
 //  Created by Bryan McClain
 
 //Some constants
@@ -13,7 +14,7 @@ const ORDER	= 32;
 const ARR_MASK = 31;
 const BIT_MASK = 4294967295;
 
-class Rand64 {
+class Rand32 {
 
 	//Create a new Rand64 Class
 	constructor() {

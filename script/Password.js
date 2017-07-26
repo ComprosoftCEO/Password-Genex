@@ -1,6 +1,6 @@
 //Not much to it...
 function GeneratePassword(password,account,key) {
-	return Hexacrypt_Encrypt(sha256(account+":"+password),key);
+	return Hexacrypt_Encrypt(sha256(account+":"+password+":"+key),key);
 }
 
 //Here is the jQuery
