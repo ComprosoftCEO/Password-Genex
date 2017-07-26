@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Password Genex ~ About</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+
+	</style>
+</head>
+
+<body>
+
+	<h1>About Password Genex</h1>
+	<hr/>
+
+	<br/>
+
+	<table class="about">
+	  <tr>
+		<td style="width: 30%">
+			<img src="img/Lock.png" width="266" height="300" alt="Lock Image" />
+		</td>
+
+		<td colspan="2">
+
+			<p style="display: inline;">Password Generator relies on two algorithms:</p>
+
+			<ul>
+				<li>SHA-256</li>
+				<li>Hexacrypt</li>
+			</ul>
+		
+			<p>		
+				SHA-256 is what's called a hashing algorithm. It takes an input of any length, and returns a string of 64 random
+				hexadecimal bytes. The same input always returns the same output. However, it is almost impossible to derive the 
+				input from the output. Therefore, it is considered to be a one-way function. In addition, changing one character
+				in the input completely changes the whole output in SHA-256. The javascript implementation used in Password Genex
+				was programmed by Chen, Yi-Cyuan. More about his code is available at
+				<a href="https://github.com/emn178/js-sha256">Git Hub</a>.
+			</p>
+
+		</td>
+	  </tr>
+
+	  <tr>
+		<td colspan="2" style="width: 70%;">
+
+			<p>
+				Hexacrypt, the second algorithm, is an advanced version of the Nazi Enigma Machine. Designed by Bryan McClain, 
+				the algorithm can be used for encrypting and decrypting messages, given that the same key is used. The algorithm
+				works by doing letter subsitution, but the subsitution string is changed for every letter in the message. Therefore,
+				the output message looks completely different from the input message. The benefit to Hexacrypt is that everything is
+				encoded using ASCII text characters, which makes it easy to encrypt plaintext. The version used here only needs to
+				encrypt the message, and doesn't use any advanced features such as adding "Garbage" or a checksum.
+				To read more about Hexacrypt, check out the official page on <a href="https://github.com/ComprosoftCEO/Hexacrypt">Git Hub</a>.
+			</p>
+		</td>
+
+		<td style="vertical-align: middle;">
+			<img src="img/Hexacrypt.png" width="300" height="120" alt="Hexacrypt"/>
+		</td>
+		
+	  </tr>
+
+	  <tr>
+		<td colspan="3">
+			<p>
+				Now the actual algorithm. Password Genex concatenates all the input boxes into a single string. The string is: <br/><br/>
+				&nbsp;&nbsp;&nbsp;&nbsp; &lt; Account &gt;:&lt; Original Password &gt;:&lt; Secret Code &gt;. <br/><br/>
+				This string is fed into SHA-256 and hashed. The output of this hash, which is a string consisting of 0-9 and A-F, is 
+				fed into Hexacrypt with "Secret Key" as the encryption key used. This outputs a "Good Password" consisting of 
+				capital and lowercase letters, numbers, and symbols. You now have the perfect password for securing your accounts!
+			</p>
+
+			<div><i>
+				Note: We are not liable if your password is stolen. These algorithms are not verified. Use at your own risk.
+			</i></div>
+		</td>
+	  </tr>
+	</table>
+	
+	</table>
+
+	<br/>
+
+		<a href="index.html">Back</a>
+	<hr/>
+
+	<p>Password Generator is programmed by Bryan McClain</p>
+
+</body>
+</html>

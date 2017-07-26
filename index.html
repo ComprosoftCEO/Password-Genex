@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Password Generator</title>
+	<title>Password Genex</title>
 	
 	<link rel="stylesheet" type="text/css" href="styles.css" />
 		
 	<script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
-	<script type="text/javascript" src="script/Rand64.js"></script>
+	<script type="text/javascript" src="script/Rand32.js"></script>
 	<script type="text/javascript" src="script/Hexacrypt.js"></script>
 	<script type="text/javascript" src="script/SHA-256.js"></script>
 	<script type="text/javascript" src="script/Password.js"></script>
@@ -17,39 +17,45 @@
 
 <body>
 
-	<h1>Password Generator</h1>
+	<h1>Password Genex</h1>
+	<h4>Quickly turn your bad, insecure passwords into a good password. </h4>
+
 	<hr/>
+	
 	<br/>
 
-	<table class="info"><tr><td>
-		<img src="img/Lock.png" width="320" height="360" alt="Lock Image" />
+	<table class="info"><tr><td colspan="2">
+		<h2>How to Use:</h2>
+	</td></tr><tr><td class="img">
+		<img src="img/Question.png" width="150" height="150" alt="Lock Image" />
 	</td><td>
-		<p>This form allows you to turn your bad, insecure passwords into a good password. The algorithm
-			merely requires the bad password, the account that the password is to be used for, and a "Secret Code"
-			that only you know. The secret code can be the same for all of your passwords. When done, you
-			get a really secure password that becomes your actual password. Simply remember the bad password and
-			the universal "Secret Code," and you will have many secure passwords.</P>
-
-		<p>How does it work? Password Generator relies on two algorithms: SHA-256 and Hexacrypt. SHA-256 is what's called
-			a hashing algorithm. It takes an input of any length, and returns a string of random characters. Merely changing
-			one character changes the whole hash in SHA-256. Hexacrypt, the second algorithm, takes the output from SHA-256
-			and converts it to a string of text characters, instead of simply hex bytes. To read more about Hexacrypt, click
-			<a href="https://github.com/ComprosoftCEO/Hexacrypt">Here</a>. The algorithm uses Javascript and jQuery.
+		<p>Put the bad password into the "Original Password" box, and type the associated account name into
+			the "Account" box. Next, secure the password with a "Secret Code" that only you know. The secret code
+			does not need to be a good password, per se, but it needs to be kept secret.
 		</p>
 
-		<i>Note: We are not liable if your password is stolen. These algorithms are not verified. Use at your own risk.</i>
+		<p style="text-align: center;">
+			Click generate, and you will have a secure password.</p>
+		</p>
+
+		<div><i>
+			To learn more about how the algorithm works, check out the <a href="about.html">About</a> page, which goes into more detail.
+		</i></div>
+
 	</td></tr></table>
 	<br/>
+
 	<hr/>
+
 	<br/>
 	<br/>
 
 	<table class="form">
 
-	   <tr><td colspan="2"><br/><br/></td></tr>
+	  <tr><td colspan="2"><br/><br/></td></tr>
 
 	  <tr><td colspan="2">
-		<p>Origional Password:</p><br/>
+		<p>Original Password:</p><br/>
 		<input type="password" class="password"/>
 	  	<br/><br/>
 	  </td></tr>
@@ -79,9 +85,16 @@
 			<input type="text" readonly="true" class="output"/>
 		</td></tr>
 
-	   <tr><td colspan="2"><br/><br/></td></tr>
+	   <tr><td colspan="2">
+			<br/>
+			<br/>
+			<div><i>
+				Note: We are not liable if your password is stolen. These algorithms are not verified. Use at your own risk.
+			</i></div>
+		</td></tr>
 
 	</table>
+
 	<br/>
 	<br/>
 </body>
