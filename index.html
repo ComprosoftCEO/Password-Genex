@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Password Generator</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+		
+	<script type="text/javascript" src="script/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="script/Rand64.js"></script>
+	<script type="text/javascript" src="script/Hexacrypt.js"></script>
+	<script type="text/javascript" src="script/SHA-256.js"></script>
+	<script type="text/javascript" src="script/Password.js"></script>
+
+	</style>
+</head>
+
+<body>
+
+	<h1>Password Generator</h1>
+	<hr/>
+	<br/>
+
+	<table class="info"><tr><td>
+		<img src="img/Lock.png" width="320" height="360" alt="Lock Image" />
+	</td><td>
+		<p>This form allows you to turn your bad, insecure passwords into a good password. The algorithm
+			merely requires the bad password, the account that the password is to be used for, and a "Secret Code"
+			that only you know. The secret code can be the same for all of your passwords. When done, you
+			get a really secure password that becomes your actual password. Simply remember the bad password and
+			the universal "Secret Code," and you will have many secure passwords.</P>
+
+		<p>How does it work? Password Generator relies on two algorithms: SHA-256 and Hexacrypt. SHA-256 is what's called
+			a hashing algorithm. It takes an input of any length, and returns a string of random characters. Merely changing
+			one character changes the whole hash in SHA-256. Hexacrypt, the second algorithm, takes the output from SHA-256
+			and converts it to a string of text characters, instead of simply hex bytes. To read more about Hexacrypt, click
+			<a href="https://github.com/ComprosoftCEO/Hexacrypt">Here</a>. The algorithm uses Javascript and jQuery.
+		</p>
+
+		<i>Note: We are not liable if your password is stolen. These algorithms are not verified. Use at your own risk.</i>
+	</td></tr></table>
+	<br/>
+	<hr/>
+	<br/>
+	<br/>
+
+	<table class="form">
+
+	   <tr><td colspan="2"><br/><br/></td></tr>
+
+	  <tr><td colspan="2">
+		<p>Origional Password:</p><br/>
+		<input type="password" class="password"/>
+	  	<br/><br/>
+	  </td></tr>
+
+	   <tr><td colspan="2"><br/><br/></td></tr>
+
+	  <tr>
+		<td style="width: 50%;">
+			<p>Account:</p><br/>
+			<input type="text" class="account"/>
+			<br/><br/>		
+		</td>
+
+		<td style="width: 50%;">
+			<p>Secret Code:</p><br/>
+			<input type="password" class="secret"/>
+			<br/><br/>
+		</td>
+	   </tr>
+
+	   <tr><td colspan="2"><br/><hr style="width: 95%; border: 1px solid black;"/><br/></td></tr>
+
+	   <tr><td colspan="2">
+			<p>Generated Password:</p><br>
+			<input type="button" id="Generate" value="Generate">&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" id="Clear" value="Clear">&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" readonly="true" class="output"/>
+		</td></tr>
+
+	   <tr><td colspan="2"><br/><br/></td></tr>
+
+	</table>
+	<br/>
+	<br/>
+</body>
+</html>

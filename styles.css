@@ -1,0 +1,77 @@
+body {
+	background-image: url(img/background.jpg);
+	background-repeat: repeat;
+}
+
+h1 {
+	text-align: center;
+	font-size: 30pt;
+}
+
+table.info {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+table.info td {
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: top;
+}
+
+table.info p {
+	font-size: 16pt;
+}
+
+table.form {
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	text-align: center;
+	float: center;
+
+	border-radius: 10px 10px 10px 10px;
+	-moz-border-radius: 10px 10px 10px 10px;
+	-webkit-border-radius: 10px 10px 10px 10px;
+	border: 2px solid #000000;
+}
+
+table.form td {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table.form p {
+	font-size: 19pt;
+    display: inline;
+}
+
+
+table.form input {
+	font-size: 16pt;
+}
+
+/*Password Input Box*/
+input.password {
+	width: 50%;
+	background-color: #f9e176;
+}
+
+input.account {
+	width: 60%;
+	background-color: #ff8c8c;
+}
+
+/*Secret Code Input Box*/
+input.secret {
+	width: 80%;
+	background-color: #a9f977;
+}
+
+/*Output Box*/
+input.output {
+	width: 70%;
+	background-color: #8cc5ff;
+}
