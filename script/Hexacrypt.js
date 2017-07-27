@@ -10,23 +10,38 @@
 //All allowed characters in the Hexacrypt string
 const allChars = " !\"#$\%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
 const charCount = allChars.length;
+var filterString;                       //Some passwords don't want certain chars
 
 
 //Filter out any illegal characters
 //===================================
 //  Returns the filtered string
-function filter(input) {
+function filterInput(input) {
 
 	var retStr = "";
 	var i;
 
 	for (i = 0; i < input.length; i++) {
-		var c = input.charCodeAt(i);
-		if (c >= 32 && c <= 126) {retStr+=String.fromCharCode(c);}
+		var c = input.charAt(i);
+		if (filterString.indexOf(c) > -1) {retStr+=c;}
 	}
 
 	return retStr;
 }
+
+//Filters all chars using the filter string
+function filterAllChars(filter) {
+    
+    //Reset filter string
+    filterString = "";    
+    
+    for (i = 0; i < allChars.length; i++) {
+        var c = allChars.charAt(i)
+        if (filter.indexOf(c) < 0) {filterString+=c;}
+    }
+
+}
+
 
 
 //Replace function for the string
@@ -44,7 +59,7 @@ function pseudoXOR(input, rand) {
 	var i, index;	
 	
 	for (i = 0; i < input.length; i++) {
-		pxor = rand.shuffleString(allChars);
+		pxor = rand.shuffleString(filterString);
 		index = pxor.indexOf(input.charAt(i));
 		input = setCharAt(input,i,pxor.charAt((pxor.length - 1) - index));
 	}
@@ -55,15 +70,19 @@ function pseudoXOR(input, rand) {
 
 //Encrypt using a watered-down Hexacrypt algorithm
 //
+//  Filter string filters any unwanted characters\
+//      -NEVER FILTER 0-9 and a-f
+//
 //  Does NOT add garbage or a checksum
 //  ONLY does PseudoXOR
-function Hexacrypt_Encrypt(message,key) {
+function Hexacrypt_Encrypt(message,key,filter) {
 
 	var rand = new Rand32();
 	
 	//Filter dis stuff first
-	message = filter(message);
-	key = filter(key);
+    filterAllChars(filter);	
+    message = filterInput(message);
+	key = filterInput(key);
 
 	//Cast to string using Hash8
     var seed = Hash8(key);
