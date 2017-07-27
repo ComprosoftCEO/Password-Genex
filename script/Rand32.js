@@ -62,7 +62,6 @@ class Rand32 {
 
 		var retVal = "";
 		var strlen, index;
-		var i;	
 
 		strlen = input.length;
 		while ((strlen = input.length) > 0) {
