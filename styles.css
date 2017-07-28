@@ -34,6 +34,7 @@ table.form td {
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	vertical-align: top;
 }
 
 table.form p {
@@ -66,7 +67,7 @@ input.secret {
 
 /*Output Box*/
 input.output {
-	width: 70%;
+	width: 60%;
 	background-color: #8cc5ff;
 }
 
@@ -118,4 +119,107 @@ table.about li {
 
 table.about p {
 	font-size: 16pt;
+}
+
+
+
+
+/*=====================*/
+/*  Checkbox Dropdown  */
+/*=====================*/
+.dropdown-check-list{
+    display: inline-block;
+    width: 68%;
+}
+
+.dropdown-check-list:focus{
+    outline:0;
+}
+
+/*Default dropdown button*/
+.dropdown-check-list .anchor {
+    position: relative;
+    cursor: pointer;
+    display: block;    
+	background:    #f7b967;
+	border-width:  2px;
+	border-style:  inset;
+	padding:       0px 20px;
+	color:         black;
+	text-align:    center;
+    font-size: 16pt;
+}
+
+/*Hover over dropdown button*/
+.dropdown-check-list .anchor:hover, .dropdown-check-list.visible .anchor:hover {
+	border-style:  ridge;
+}
+
+.dropdown-check-list .anchor:after {
+    position: absolute;
+    content: "";
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    padding: 5px;
+    right: 10px;
+    top: 20%;
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.dropdown-check-list .anchor:active:after {
+    right: 8px;
+    top: 21%;
+}
+
+.dropdown-check-list ul.items {
+    padding: 2px;
+	height: 150px;
+	width: 11%;
+    display: none;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+	overflow-y: scroll;
+	text-align: left;
+	background-color: #f9cb9c;
+}
+
+.dropdown-check-list ul.items li {
+    list-style: none;
+}
+
+/*Dropdown button selected, no Hover*/
+.dropdown-check-list.visible .anchor {
+	background:    #f7b967;
+	border-width:  2px;
+	border-style:  outset;
+	text-align:    center;
+    font-size: 16pt;
+}
+
+.dropdown-check-list.visible .items {
+    display: block;
+}
+
+a.but_item {
+	font: bold 11px Arial;
+	text-decoration: none;
+	background-color: #EEEEEE;
+	color: #333333;
+	padding: 2px 6px 2px 6px;
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	border-left: 1px solid #CCCCCC;
+	font-size: 8pt;
+	padding: 0px;
+}
+
+a.but_item:hover {
+	cursor: pointer;
 }
