@@ -67,10 +67,12 @@
 		<td colspan="3">
 			<p>
 				Now the actual algorithm. Password Genex concatenates all the input boxes into a single string. The string is: <br/><br/>
-				&nbsp;&nbsp;&nbsp;&nbsp; &lt; Account &gt;:&lt; Original Password &gt;:&lt; Secret Code &gt;. <br/><br/>
+				&nbsp;&nbsp;&nbsp;&nbsp; &lt; Account &gt;:&lt; Original Password &gt;:&lt; Secret Code &gt; <br/><br/>
 				This string is fed into SHA-256 and hashed. The output of this hash, which is a string consisting of 0-9 and A-F, is 
-				fed into Hexacrypt with "Secret Key" as the encryption key used. This outputs a "Good Password" consisting of 
-				capital and lowercase letters, numbers, and symbols. You now have the perfect password for securing your accounts!
+				fed into Hexacrypt with "Secret Key" as the encryption key used. This implementation of Hexacrypt also takes a third
+				parameter, called "filter," which removes any illegal characters when running the password through Hexacrypt (As some passwords do
+				not allow certain characters). This outputs a "Good Password" consisting of capital and lowercase letters, numbers, and symbols.
+				You now have the perfect password for securing your accounts!
 			</p>
 
 			<div><i>
