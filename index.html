@@ -13,8 +13,6 @@
 	<script type="text/javascript" src="script/SHA-256.js"></script>
 	<script type="text/javascript" src="script/Password.js"></script>
     <script type="text/javascript" src="script/Dropdown.js"></script>
-
-	</style>
 </head>
 
 <body>
@@ -41,7 +39,7 @@
 		</p>
 
 		<p style="text-align: center;">
-			Click generate, and you will have a secure password.</p>
+			Click generate, and you will have a secure password.
 		</p>
 
 		<div><i>
@@ -83,46 +81,46 @@
 
 		<td style="width: 25%;">
 			<p>Allowed Characters:</p><br/>
-			<div id="list1" class="dropdown-check-list" tabindex="100">
+			<div id="list1" class="dropdown-check-list">
                 <span class="anchor">Filter:&nbsp;&nbsp;&nbsp;&nbsp;</span>
                 <ul class="items">
 					<li>
-						<a class="but_item" id="SelectAll" />Select All</a>
-						<a class="but_item" id="DeselectAll" />Deselect All</a>
+						<a class="but_item" id="SelectAll" >Select All</a>
+						<a class="but_item" id="DeselectAll" >Deselect All</a>
 					</li>
-                    <li><input id="filter" type="checkbox" checked value=" "/><label>(Space)</label></li>
-                    <li><input id="filter" type="checkbox" checked value="!"/><label>!</label></li>
-                    <li><input id="filter" type="checkbox" checked value='"'/><label>&quot;</label></li>
-                    <li><input id="filter" type="checkbox" checked value="#"/><label>#</label></li>
-                    <li><input id="filter" type="checkbox" checked value="$"/><label>$</label></li>
-                    <li><input id="filter" type="checkbox" checked value="%"/><label>%</label></li>
-                    <li><input id="filter" type="checkbox" checked value="&"/><label>&amp;</label></li>
-                    <li><input id="filter" type="checkbox" checked value="'"/><label>'</label></li>
-                    <li><input id="filter" type="checkbox" checked value="("/><label>(</label></li>
-                    <li><input id="filter" type="checkbox" checked value=")"/><label>)</label></li>
-                    <li><input id="filter" type="checkbox" checked value="*"/><label>*</label></li>
-                    <li><input id="filter" type="checkbox" checked value="+"/><label>+</label></li>
-                    <li><input id="filter" type="checkbox" checked value=","/><label>,</label></li>
-                    <li><input id="filter" type="checkbox" checked value="-"/><label>-</label></li>
-                    <li><input id="filter" type="checkbox" checked value="."/><label>.</label></li>
-                    <li><input id="filter" type="checkbox" checked value="/"/><label>/</label></li>
-                    <li><input id="filter" type="checkbox" checked value=":"/><label>:</label></li>
-                    <li><input id="filter" type="checkbox" checked value=";"/><label>;</label></li>
-                    <li><input id="filter" type="checkbox" checked value="<"/><label>&lt;</label></li>
-                    <li><input id="filter" type="checkbox" checked value="="/><label>=</label></li>
-                    <li><input id="filter" type="checkbox" checked value=">"/><label>&gt;</label></li>
-                    <li><input id="filter" type="checkbox" checked value="?"/><label>?</label></li>
-                    <li><input id="filter" type="checkbox" checked value="@"/><label>@</label></li>
-                    <li><input id="filter" type="checkbox" checked value="["/><label>[</label></li>
-                    <li><input id="filter" type="checkbox" checked value="\"/><label>\</label></li>
-                    <li><input id="filter" type="checkbox" checked value="]"/><label>]</label></li>
-                    <li><input id="filter" type="checkbox" checked value="^"/><label>^</label></li>
-                    <li><input id="filter" type="checkbox" checked value="_"/><label>_</label></li>
-                    <li><input id="filter" type="checkbox" checked value="`"/><label>`</label></li>
-                    <li><input id="filter" type="checkbox" checked value="{"/><label>{</label></li>
-                    <li><input id="filter" type="checkbox" checked value="|"/><label>|</label></li>
-                    <li><input id="filter" type="checkbox" checked value="}"/><label>}</label></li>
-                    <li><input id="filter" type="checkbox" checked value="~"/><label>~</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value=" "/><label>(Space)</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="!"/><label>!</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value='"'/><label>&quot;</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="#"/><label>#</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="$"/><label>$</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="%"/><label>%</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="&amp;"/><label>&amp;</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="'"/><label>'</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="("/><label>(</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value=")"/><label>)</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="*"/><label>*</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="+"/><label>+</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value=","/><label>,</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="-"/><label>-</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="."/><label>.</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="/"/><label>/</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value=":"/><label>:</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value=";"/><label>;</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="&lt;"/><label>&lt;</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="="/><label>=</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value=">"/><label>&gt;</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="?"/><label>?</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="@"/><label>@</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="["/><label>[</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="\"/><label>\</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="]"/><label>]</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="^"/><label>^</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="_"/><label>_</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="`"/><label>`</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="{"/><label>{</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="|"/><label>|</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="}"/><label>}</label></li>
+                    <li><input name="filter" type="checkbox" checked="checked" value="~"/><label>~</label></li>
                 </ul>
            </div>
 		</td>
@@ -131,10 +129,10 @@
 	   <tr><td colspan="3"><br/><hr style="width: 95%; border: 1px solid black;"/><br/></td></tr>
 
 	   <tr><td colspan="3">
-			<p>Generated Password:</p><br>
-			<input type="button" id="Generate" value="Generate">&nbsp;&nbsp;&nbsp;&nbsp;
-            <input type="button" id="Clear" value="Clear">&nbsp;&nbsp;&nbsp;&nbsp;
-			<input type="text" readonly="true" class="output"/>
+			<p>Generated Password:</p><br/>
+			<input type="button" id="Generate" value="Generate"/>&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="button" id="Clear" value="Clear"/>&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="text" id="Output" readonly="readonly" class="output"/>
 		</td></tr>
 
 	   <tr><td colspan="3">

@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 		//Parse the allowed characters
 		var filter = "";
-		$("input[id='filter']").each(function(index,element) {
+		$("input[name='filter']").each(function(index,element) {
 			if (!element.checked) {filter+=element.value;}
 		});
 		console.log(filter);	
@@ -36,12 +36,12 @@ $(document).ready(function() {
 
 	//Check all checkboxes
 	$("#SelectAll").click(function() {
-		$("input[id='filter']").prop('checked', true);
+		$("input[name='filter']").prop('checked', true);
 	});
 
 	//Uncheck all checkboxes
 	$("#DeselectAll").click(function() {
-		$("input[id='filter']").prop('checked', false);
+		$("input[name='filter']").prop('checked', false);
 	});
 
 
